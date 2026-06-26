@@ -1,0 +1,55 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body-md selection:bg-brand-gold/20;
+  }
+}
+
+/* Material symbols custom rules */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+  color: #D4AF37;
+}
+
+/* Premium blurred navigation bar */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* Editorial underline indicators */
+.editorial-border {
+  position: relative;
+}
+.editorial-border::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 1px;
+  background-color: #D4AF37;
+}
+
+/* Customized thin scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f9f9f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 3px;
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
